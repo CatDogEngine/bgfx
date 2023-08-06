@@ -1701,6 +1701,7 @@ namespace bgfx
 							if (bx::open(&writer, ofp.c_str() ) )
 							{
 								writef(&writer, "%s : %s\n", _options.outputFilePath.c_str(), preprocessor.m_depends.c_str() );
+								bx::flush(&writer);
 								bx::close(&writer);
 							}
 						}
@@ -2599,6 +2600,7 @@ namespace bgfx
 							if (bx::open(&writer, ofp.c_str() ) )
 							{
 								writef(&writer, "%s : %s\n", _options.outputFilePath.c_str(), preprocessor.m_depends.c_str() );
+								bx::flush(&writer);
 								bx::close(&writer);
 							}
 						}
